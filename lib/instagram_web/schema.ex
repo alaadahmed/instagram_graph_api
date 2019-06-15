@@ -9,6 +9,12 @@ defmodule InstagramWeb.Schema do
     field :photos, list_of(:photo_type) do
       resolve(&Resolvers.PhotoResolver.photos/3)
     end
+
+    @desc "Get a specific photo using ID"
+    field :photo, :photo_type do
+      arg(:id, non_null(:id))
+      resolve(&Resolvers.PhotoResolver.photo/3)
+    end
   end
 
   # mutation do
