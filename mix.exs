@@ -43,7 +43,8 @@ defmodule Instagram.MixProject do
       {:plug_cowboy, "~> 2.0"},
       {:absinthe, "~> 1.4"},
       {:absinthe_plug, "~> 1.4"},
-      {:absinthe_ecto, ">= 0.0.0"}
+      {:absinthe_ecto, ">= 0.0.0"},
+      {:faker, "~> 0.12", only: [:dev, :test]}
     ]
   end
 
